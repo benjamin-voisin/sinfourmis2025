@@ -1,11 +1,14 @@
 #include "sinfourmis.h"
+#include <iostream>
 
 reine_retour cpp_reine_activation(fourmi_etat fourmis[], const unsigned int nb_fourmis,
                                   const reine_etat *etat, const salle *salle) {
+    std::cout << "feur" << std::endl;
     return {.action = REINE_PASSE, .arg = 0};
 }
 
 fourmi_retour cpp_fourmi_activation(fourmi_etat *etat, const salle *salle) {
+    std::cout << "prout" << std::endl;
     return {.action = FOURMI_PASSE, .arg = 0, .depose_pheromone = false, .pheromone = 0};
 }
 
